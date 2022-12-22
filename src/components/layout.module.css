@@ -1,0 +1,13 @@
+.container {
+  margin: auto;
+  margin-left: 20vh;
+  margin-right: 20vh;
+  font-family: 'helvetica neue', sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--bs-color5);
+}
