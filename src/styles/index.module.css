@@ -97,3 +97,47 @@
     opacity: 1;
   }
 }
+
+/* icons */
+
+.social-icons {
+  display: flex;
+  margin-top: 1vh;
+  flex-direction: row;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  padding: 15px;
+
+  color: #fff;
+  background-color: var(--bs-color5);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  opacity: 0;
+  animation: show-icons 0.6s ease-in forwards;
+  animation-delay: .5s;
+}
+
+.social-icon:hover {
+  background-color: var(--bs-color4);
+}
+
+@keyframes show-icons {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
