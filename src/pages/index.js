@@ -1,7 +1,7 @@
 import React from "react";
 import { Script } from "gatsby";
-import Layout from "../components/layout";
-import Navbar from "../components/navbar";
+import Layout from "../components/landing-page-layout";
+import Navbar from "../components/landing-page-navbar";
 import '../styles/global.css';
 import {
   container,
