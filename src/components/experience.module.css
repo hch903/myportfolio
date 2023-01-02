@@ -1,0 +1,28 @@
+.card {
+  border: 2px solid var(--bs-gray-600);
+  border-radius: 10px;
+  box-shadow: 7px 7px 5px var(--bs-gray-600);
+  background-color: white;
+  padding: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.main-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.employer-name {
+  color: var(--bs-color1)
+}
+
+.detail-container {
+  text-align: left;
+}

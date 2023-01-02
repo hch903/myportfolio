@@ -1,0 +1,41 @@
+{
+  "Amazon": {
+    "employer": "AWS, Amazon Connect",
+    "location": "Seattle, WA",
+    "time": "May. 2022 - Aug. 2022",
+    "title": "Software Development Engineer Intern",
+    "tech-stack": ["Java", "Gson", "Mockito", "AWS Lambda", "Amazon Lex"],
+    "description": [
+      "1. Constructed a feature to implement alias resolution with Java which allows customers to replicate AWS Lambda and Amazon Lex configurations to other regions.",
+      "2. Wrote the unit tests to cover the main scenarios with Mockito for all functions implemented and reached 90% coverage.",
+      "3. Established format validation for the input JSON files and transformed them into the data type compatible with respective packages, which enables data conversion between the current version and the incoming migration version.",
+      "4. Converted input JSON into Java Objects with Gson, self-designed serializers, and converters to handle new parameters"
+    ]
+  },
+  "Dent&Co": {
+    "employer": "Dent&Co",
+    "location": "Taipei, Taiwan",
+    "time": "Nov. 2019 - Oct. 2020",
+    "title": "Software Engineer Intern",
+    "tech-stack": "Node.js, Chatbot, Express.js, MYSQL, PM2, EC2, CloudWatch",
+    "description": [
+      "1. Designed and developed a LINE chatbot with Node.js and managed with PM2. This provided over 500 dentists and dental assistants to check around 15,000 patients’ data and over 200,000 feedback.",
+      "2. Implemented 20 features of chatbot including providing weekly data reports and real-time appointment notifications to dental clinics. This decreased 80% of the time for clinics to confirm appointments with patients by phone calls.",
+      "3. Established a platform with Vue.js, Express.js, and MySQL for dental dealers to advertise products to dentists, which increased by 20 percent of monthly revenue.",
+      "4. Deployed chatbot server on AWS EC2 and monitored memory utilization by AWS CloudWatch."
+    ]
+  },
+  "Cathay": {
+    "employer": "Cathay United Bank",
+    "location": "Taipei, Taiwan",
+    "time": "Jul. 2019 - Dec. 2019",
+    "title": "Web Development Intern",
+    "tech-stack": "HTML, CSS, jQuery, PHP, MYSQL",
+    "description": [
+      "1. Constructed website with HTML/CSS/jQuery and PHP, which provided over 50 employees to check and upload daily trading information on the intranet.",
+      "2. Accomplished regulation searching system with over 100 internal and external regulations, which reduced over 60% of the searching time on preceding Excel tables.",
+      "3. Refactored a better relation with entity-relationship diagram in MySQL database to diminish 40% of SQL query error rate.",
+      "4. Designed and devised a meeting room reservation website for the whole trading room. Over 100 employees reserve meeting rooms via this web application two times a week."
+    ]
+  }
+}

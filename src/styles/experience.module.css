@@ -1,0 +1,16 @@
+.sectionHeading {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.sectionHeading::after {
+  content: "";
+  height: 1px;
+  border-bottom: 1px solid var(--bs-color4);
+  width: 80px;
+
+  position: absolute;
+  top: 3.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
