@@ -5,8 +5,9 @@ import Experience from "../components/experience";
 import {
   sectionHeading
 } from '../styles/experience.module.css';
+import { graphql } from "gatsby";
 
-const ExperiencePage = () => {
+const ExperiencePage = ({ data }) => {
   return (
     <>
       <Layout>
@@ -20,7 +21,9 @@ const ExperiencePage = () => {
           <div className="row">
             <div className="col-md-2"></div>
             <div className="col-md-8">
-              <Experience></Experience>
+              {data.allMdx.nodes.map(node => 
+                <Experience data={node}></Experience>
+              )}
             </div>
           </div>
         </div>
@@ -40,3 +43,34 @@ export const Head = () => {
     </>
   )
 }
+
+export const query = graphql`
+  query {
+    allMdx {
+      nodes {
+        frontmatter {
+          employer
+          location
+          time
+          title
+          image {
+            relativePath
+            childImageSharp {
+              gatsbyImageData(width: 100, height: 100)
+            }
+          }
+          tech_stack {
+            name
+            image_src {
+              relativePath
+              childImageSharp {
+                gatsbyImageData(width: 50, height: 50)
+              }
+            }
+          }
+          description
+        }
+      }
+    }
+  }
+`
