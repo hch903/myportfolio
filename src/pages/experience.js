@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Experience from "../components/experience";
@@ -7,7 +7,40 @@ import {
 } from '../styles/experience.module.css';
 import { graphql } from "gatsby";
 
+const COMPANIES = ["AWS, Amazon Connect", "Dent&Co", "Cathay United Bank"];
+const IS_ACTIVE_STATUS = [true, false, false];
+
 const ExperiencePage = ({ data }) => {
+  const getNodeId = (companyName) => {
+    const node = data.allMdx.nodes.find(node => 
+      node.frontmatter.employer.includes(companyName)  
+    )
+    return node.id;
+  }
+
+  const [isActiveObj, setActive] = useState(
+    COMPANIES.reduce((acc, company, index) => {
+      acc[company] = IS_ACTIVE_STATUS[index];
+      return acc;
+    }, {})
+  );
+
+
+  const handleClick = (e) => {
+    const company = e.target.textContent;
+    const tmpIsActive = {...isActiveObj};
+
+    for (let key in tmpIsActive) {
+      if (key === company) {
+        tmpIsActive[key] = true;
+      } else {
+        tmpIsActive[key] = false;
+      }
+    }
+
+    setActive(tmpIsActive);
+  }
+  
   return (
     <>
       <Layout>
@@ -18,11 +51,29 @@ const ExperiencePage = ({ data }) => {
               <h1 className={sectionHeading}>Experience</h1>
             </div>
           </div>
+          <div className="row mb-2">
+            <div className="col-md-2"></div>
+            <div className="col-md-8 text-center">
+              <div className="btn-group" role="group" aria-label="Basic example">
+                {COMPANIES.map(company => 
+                  <button 
+                    type="button"
+                    id={getNodeId(company)} 
+                    key={company}
+                    className={`btn btn-outline-primary ${isActiveObj[company] ? "active" : ""}`}
+                    onClick={handleClick}
+                  >{company}</button>
+                )}
+              </div>
+            </div>
+          </div>
           <div className="row">
             <div className="col-md-2"></div>
             <div className="col-md-8">
               {data.allMdx.nodes.map(node => 
-                <Experience data={node}></Experience>
+                <div>
+                  {isActiveObj[node.frontmatter.employer] ? <Experience data={node}></Experience> : null }
+                </div>
               )}
             </div>
           </div>
@@ -70,6 +121,7 @@ export const query = graphql`
           }
           description
         }
+        id
       }
     }
   }

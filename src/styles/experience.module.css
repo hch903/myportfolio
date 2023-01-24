@@ -1,6 +1,8 @@
 .sectionHeading {
   position: relative;
   margin-bottom: 30px;
+
+  letter-spacing: 0.1rem;
 }
 
 .sectionHeading::after {
