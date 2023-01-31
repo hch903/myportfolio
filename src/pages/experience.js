@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Experience from "../components/experience";
 import {
+  container,
   sectionHeading
 } from '../styles/experience.module.css';
 import { graphql } from "gatsby";
@@ -45,7 +46,7 @@ const ExperiencePage = ({ data }) => {
     <>
       <Layout>
         <Navbar></Navbar>
-        <div className="container">
+        <div className={container}>
           <div className="row">
             <div className="col-lg-12 text-center">
               <h1 className={sectionHeading}>Experience</h1>

@@ -1,3 +1,13 @@
+.container-cover {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  left: -100vw;
+  background-color: var(--bs-color5);
+  animation: appear-content 1s linear forwards;
+}
+
 .container {
   margin: auto;
   
@@ -6,4 +16,16 @@
   flex-direction: column;
 
   color: var(--bs-color5);
+}
+
+@keyframes appear-content {
+  0% {
+    left: -100vw;
+  }
+  50% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
 }

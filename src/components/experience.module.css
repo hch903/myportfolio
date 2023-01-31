@@ -9,14 +9,17 @@
 .main-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding-left: 1rem;
 }
 
 .main-text-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
+
+  margin-left: 3rem;
 }
 
 .employer-name {
@@ -30,6 +33,7 @@
 .tech-stack-container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 1rem;
 }
 
 .tech-stack {
@@ -45,6 +49,7 @@
 
 .tech-stack-name {
   text-align: center;
-  max-width: 100px;
+  max-width: 75px;
   font-weight: 600;
+  line-height: 1em;
 }
