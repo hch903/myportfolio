@@ -48,8 +48,8 @@ const ExperiencePage = ({ data }) => {
         <Navbar></Navbar>
         <div className={container}>
           <div className="row">
-            <div className="col-lg-12 text-center">
-              <h1 className={sectionHeading}>Experience</h1>
+            <div className="col-lg-12 text-center mb-3">
+              <span className={sectionHeading}>Experience</span>
             </div>
           </div>
           <div className="row mb-2">
