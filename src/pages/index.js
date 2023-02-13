@@ -24,7 +24,7 @@ const IndexPage = () => {
         <Navbar></Navbar>
         <div className={container}>
           <div className={title}>
-            <h1 className={revealTitle}>
+            <h1 className={`${revealTitle} mb-3`}>
               <span>Hey, I'm HaoChen Hsieh</span>
             </h1>
           </div>

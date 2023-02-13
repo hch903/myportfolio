@@ -9,7 +9,7 @@ import {
 
 export default function Navbar() {
   return (
-    <div className={container}>
+    <div className={`${container} mb-3`}>
       <div className={revealNavbar}>
         <ul className={nav}>
           <li className={navItem}>
