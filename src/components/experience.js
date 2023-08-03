@@ -45,7 +45,7 @@ export default function Experience({ data }) {
           })}
         </div>
         <h4>Description</h4>
-        {frontmatter.description.map(item => <p>{item}</p>)}
+        <p>{frontmatter.description}</p>
       </div>
     </div>
   )

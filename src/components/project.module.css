@@ -1,0 +1,28 @@
+.project-container {
+  box-sizing: border-box;
+  border: 1px solid ;
+  height: 100%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.text-container {
+  padding-left: 4rem;
+}
+
+.image-container {
+  padding-right: 2rem;
+}
+
+.link-button {
+  border: 2px solid var(--bs-color4);
+  background-color: var(--bs-color4);
+  border-radius: 10%;
+  padding: 0rem 0.3rem 0rem 0.3rem;
+  color: var(--bs-color2);
+  font-weight: 200;
+}

@@ -90,7 +90,7 @@ export const Head = () => <title>HaoChen Hsieh</title>
 
 export const query = graphql`
   query {
-    allMdx {
+    allMdx( filter: { frontmatter: { slug: { eq: "experience" } } }) {
       nodes {
         frontmatter {
           employer
