@@ -127,6 +127,7 @@
 }
 
 .social-icon:hover {
+  color: var(--bs-color2);
   background-color: var(--bs-color4);
 }
 

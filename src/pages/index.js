@@ -25,7 +25,7 @@ const IndexPage = () => {
         <div className={container}>
           <div className={title}>
             <h1 className={`${revealTitle} mb-3`}>
-              <span>Hey, I'm HaoChen Hsieh</span>
+              <span>Hey, I'm Hao-Chen Hsieh</span>
             </h1>
           </div>
           <div className={introduction}>

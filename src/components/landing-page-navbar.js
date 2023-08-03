@@ -12,21 +12,16 @@ export default function Navbar() {
     <div className={`${container} mb-3`}>
       <div className={revealNavbar}>
         <ul className={nav}>
-          <li className={navItem}>
-            <Link to="/">
-              <span>About</span>
-            </Link>
-          </li>
-          <li className={navItem}>
-            <Link to="/experience">
+          <Link to="/experience">
+            <li className={navItem}>
               <span>Experience</span>
-            </Link>
-          </li>
-          <li className={navItem}>
-            <Link to="/projects">
+            </li> 
+          </Link>
+          <Link to="/projects">
+            <li className={navItem}>
               <span>Projects</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
