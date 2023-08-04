@@ -12,6 +12,16 @@ const COMPANIES = ["AWS, Amazon Connect", "Dent&Co", "Cathay United Bank"];
 const IS_ACTIVE_STATUS = [true, false, false];
 
 const ExperiencePage = ({ data }) => {
+  const [paddingTop, setPaddingTop] = useState(0);
+
+  const handlePaddingChange = (padding) => {
+      setPaddingTop(padding);
+  }
+
+  let paddingStyle = {
+    paddingTop: `${paddingTop}px`
+  };
+
   const getNodeId = (companyName) => {
     const node = data.allMdx.nodes.find(node => 
       node.frontmatter.employer.includes(companyName)  
@@ -45,8 +55,8 @@ const ExperiencePage = ({ data }) => {
   return (
     <>
       <Layout>
-        <Navbar></Navbar>
-        <div className={container}>
+        <Navbar onPaddingChange={handlePaddingChange}></Navbar>
+        <div className={container} style={paddingStyle}>
           <div className="row">
             <div className="col-lg-12 text-center mb-3">
               <span className={sectionHeading}>Experience</span>

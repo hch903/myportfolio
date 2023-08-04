@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar";
 import Project from "../components/project";
@@ -9,11 +9,21 @@ import {
 import { graphql } from "gatsby";
 
 const ProjectsPage = ({ data }) => {
+  const [paddingTop, setPaddingTop] = useState(0);
+
+  const handlePaddingChange = (padding) => {
+      setPaddingTop(padding);
+  }
+
+  let paddingStyle = {
+    paddingTop: `${paddingTop}px`
+  };
+  
   return (
     <>
       <Layout>
-        <Navbar></Navbar>
-        <div className={container}>
+        <Navbar onPaddingChange={handlePaddingChange}></Navbar>
+        <div className={container} style={paddingStyle}>
           <div className="row">
             <div className="col-lg-12 text-center mb-3">
               <span className={sectionHeading}>Projects</span>

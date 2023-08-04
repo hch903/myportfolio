@@ -11,7 +11,6 @@ import {
 export default function Project({ data }) {
   const frontmatter = data.frontmatter;
   const projectImage = getImage(frontmatter.image);
-  console.log(frontmatter)
   return (
     <div className={projectContainer}>
       <div className="row">

@@ -54,3 +54,11 @@ body {
   font-family: var(--bs-font-family);
   margin: 0;
 }
+
+ul {
+  margin-bottom: 0;
+}
+
+.fixed-nav {
+  position: fixed;
+}
