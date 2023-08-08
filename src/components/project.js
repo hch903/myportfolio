@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React from "react";
 import {
@@ -22,12 +21,12 @@ export default function Project({ data }) {
             {
               frontmatter.links
                 .map(link => 
-                  <Link 
-                    to={link.url}
+                  <a
+                    href={link.url}
                     className={linkButton}
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 )
             }
             

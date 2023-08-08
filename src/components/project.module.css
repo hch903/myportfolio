@@ -18,7 +18,7 @@
   padding-right: 2rem;
 }
 
-.link-button {
+.link-button, .link-button:hover {
   border: 2px solid var(--bs-color4);
   background-color: var(--bs-color4);
   border-radius: 10%;
