@@ -20,14 +20,20 @@ export default function Project({ data }) {
           <div className="mb-3">
             {
               frontmatter.links
-                .map(link => 
-                  <a
-                    href={link.url}
-                    className={linkButton}
-                  >
-                    {link.name}
-                  </a>
-                )
+                .map(link => {
+                  if (link.name !== null) {
+                    return (
+                      <a
+                        href={link.url}
+                        className={linkButton}
+                      >
+                        {link.name}
+                      </a>
+                    )
+                  } else {
+                    return <></>
+                  }
+                })
             }
             
           </div>
