@@ -26,7 +26,7 @@ const ProjectsPage = ({ data }) => {
         <div className={container} style={paddingStyle}>
           <div className="row">
             <div className="col-lg-12 text-center mb-3">
-              <span className={sectionHeading}>Projects</span>
+              <span className={sectionHeading}>Side Projects</span>
             </div>
           </div>
           <div className="row">

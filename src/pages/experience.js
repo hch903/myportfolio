@@ -8,6 +8,7 @@ import Experience from "../components/experience";
 import {
   container,
   sectionHeading,
+  verticalTimelineCustomLine
 } from '../styles/experience.module.css';
 import { graphql } from "gatsby";
 
@@ -29,10 +30,10 @@ const ExperiencePage = ({ data }) => {
         <div className={container} style={paddingStyle}>
           <div className="row">
             <div className="col-lg-12 text-center mb-3">
-              <span className={`${sectionHeading}`}>Experience</span>
+              <span className={`${sectionHeading}`}>Work Experience</span>
             </div>
           </div>
-          <VerticalTimeline>
+          <VerticalTimeline className={verticalTimelineCustomLine}>
             {data.allMdx.nodes.map((node, index) => 
               <Experience key={`experience-${index}`} data={node}></Experience>
             )}
