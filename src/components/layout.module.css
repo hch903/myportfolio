@@ -9,6 +9,7 @@
 }
 
 .container {
+  background: #e3e3e3;
   margin: auto;
   
   min-height: 100vh;

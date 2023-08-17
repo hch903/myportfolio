@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
   card,
   mainContainer,
   mainTextContainer,
+  iconContainer,
   employerName,
   detailContainer,
   techStackContainer,
@@ -14,39 +16,43 @@ import {
 
 export default function Experience({ data }) {
   const frontmatter = data.frontmatter;
-  const companyImage = getImage(frontmatter.image);
+  const companyImage = getImage(frontmatter.icon);
   return (
-    <div className={card}>
-      <div className={mainContainer}>
-        <GatsbyImage 
-          image={companyImage}
-          alt={frontmatter.employer}
-        ></GatsbyImage>
-        <div className={mainTextContainer}>
-          <h2 className={employerName}>{frontmatter.employer}</h2>
-          <span className='title'><i>{frontmatter.title}</i></span>
+    <VerticalTimelineElement
+      contentStyle={{
+        background: 'var(--bs-color3)',
+        color: 'var(--bs-color5)',
+        borderBottom: '5px solid white'
+      }}
+      contentArrowStyle={{ borderRight: "7px solid var(--bs-color3)" }}
+      date={frontmatter.time}
+      iconStyle={{ background: frontmatter.iconbg }}
+      icon={
+        <div className={iconContainer}>
+          <GatsbyImage
+            image={companyImage}
+            alt={frontmatter}
+            style={{ width: '80%', height: '80%' }}
+          ></GatsbyImage>
         </div>
-      </div>
-      <div className={detailContainer}>
-        <h4>Tech Stack</h4>
-        <div className={techStackContainer}>
-          {frontmatter.tech_stack.map(item => {
-            const logo = getImage(item.image_src);
-            return (
-              <div className={techStack}>
-                <GatsbyImage
-                  className={techStackImage}
-                  image={logo}
-                  alt={item.name}
-                ></GatsbyImage>
-                <span className={techStackName}>{item.name + " "}</span>
-              </div>
-            )
-          })}
+      }
+    >
+      <div>
+        <div className='d-flex flex-row justify-content-between align-items-center'>
+          <h3 className={`mb-0 ${employerName}`}>{frontmatter.employer}</h3>
+          <p className='m-0' style={{ fontWeight: '200' }}>{frontmatter.location}</p>
         </div>
-        <h4>Description</h4>
-        <p>{frontmatter.description}</p>
+        <p className='mt-2 mb-0'><i>{frontmatter.title}</i></p>
       </div>
-    </div>
+      <ul className='mt-3'>
+        {frontmatter.exp_description.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+    </VerticalTimelineElement>
   )
 }

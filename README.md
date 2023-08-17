@@ -60,3 +60,11 @@ nvm use 18
 npm i
 npm run develop
 ```
+
+## How to solve the isseu: 'Something went wrong installing the "sharp" module'
+
+```
+brew install vips
+
+npm rebuild --verbose sharp
+```
