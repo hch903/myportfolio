@@ -53,6 +53,7 @@ a, a:hover {
 body {
   font-family: var(--bs-font-family);
   margin: 0;
+  overflow-x: hidden;
 }
 
 ul {

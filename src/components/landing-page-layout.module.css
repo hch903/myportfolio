@@ -10,3 +10,8 @@
 
   color: var(--bs-color5);
 }
+
+.wrapper {
+  border-left: 10px solid var(--bs-color5);
+  padding: 2rem;
+}

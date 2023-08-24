@@ -24,8 +24,8 @@ const IndexPage = () => {
         <Navbar></Navbar>
         <div className={container}>
           <div className={title}>
-            <h1 className={`${revealTitle} mb-3`}>
-              <span>Hey, I'm Hao-Chen Hsieh</span>
+            <h1 className={`${revealTitle} fw-900 mb-3`}>
+              <span>Hey, I'm </span><span style={{ color: 'var(--bs-color1) '}}>Hao-Chen Hsieh</span>
             </h1>
           </div>
           <div className={introduction}>

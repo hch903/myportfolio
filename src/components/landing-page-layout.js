@@ -1,6 +1,12 @@
 import * as React from 'react';
-import { container } from './landing-page-layout.module.css';
+import { container, wrapper } from './landing-page-layout.module.css';
 
 export default function Layout({ children }) {
-  return <div className={container}>{ children }</div>;
+  return (
+    <div className={container}>
+      <div className={wrapper}>
+        { children }
+      </div>
+    </div>
+  );
 }

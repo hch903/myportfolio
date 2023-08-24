@@ -35,21 +35,21 @@ export default function Navbar({ onPaddingChange }) {
     <div className={container} ref={navbar}>
       <nav>
         <ul className={nav}>
-          <li className={navItem}>
-            <Link to="/" className={navText}>
+          <Link to="/" className={navText}>
+            <li className={navItem}>
               <span>About</span>
-            </Link>
-          </li>
-          <li className={navItem}>
-            <Link to="/experience" className={navText}>
+            </li>
+          </Link>
+          <Link to="/experience" className={navText}>
+            <li className={navItem}>
               <span>Experience</span>
-            </Link>
-          </li>
-          <li className={navItem}>
-            <Link to="/projects" className={navText}>
+            </li>
+          </Link>
+          <Link to="/projects" className={navText}>
+            <li className={navItem}>
               <span>Projects</span>
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </nav>
     </div>

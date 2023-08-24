@@ -32,7 +32,7 @@ export default function Experience({ data }) {
           <GatsbyImage
             image={companyImage}
             alt={frontmatter}
-            style={{ width: '80%', height: '80%' }}
+            style={{ width: '70%', height: '70%' }}
           ></GatsbyImage>
         </div>
       }
