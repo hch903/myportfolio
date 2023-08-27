@@ -2,16 +2,8 @@ import * as React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import {
-  card,
-  mainContainer,
-  mainTextContainer,
   iconContainer,
   employerName,
-  detailContainer,
-  techStackContainer,
-  techStack,
-  techStackImage,
-  techStackName
 } from './experience.module.css';
 
 export default function Experience({ data }) {
@@ -37,14 +29,22 @@ export default function Experience({ data }) {
         </div>
       }
     >
-      <div>
+      <div className='mb-3'>
         <div className='d-flex flex-row justify-content-between align-items-center'>
           <h3 className={`mb-0 ${employerName}`}>{frontmatter.employer}</h3>
           <p className='m-0' style={{ fontWeight: '200' }}>{frontmatter.location}</p>
         </div>
-        <p className='mt-2 mb-0'><i>{frontmatter.title}</i></p>
+        <p className='mt-2 mb-3'><i>{frontmatter.title}</i></p>
+        <span>
+          <b>Tech Stack: </b>
+          {
+            frontmatter.tech_stack
+              .map(tech => tech.name)
+              .join(', ')
+          }
+        </span>
       </div>
-      <ul className='mt-3'>
+      <ul>
         {frontmatter.exp_description.map((point, index) => (
           <li
             key={`experience-point-${index}`}

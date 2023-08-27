@@ -70,12 +70,6 @@ export const query = graphql`
           iconbg
           tech_stack {
             name
-            image_src {
-              relativePath
-              childImageSharp {
-                gatsbyImageData(width: 50, height: 50)
-              }
-            }
           }
           exp_description
         }
