@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import {
   container,
   nav,
+  logo,
   navItem,
   navText
 } from './navbar.module.css';
@@ -32,8 +34,17 @@ export default function Navbar({ onPaddingChange }) {
   });
 
   return (
-    <div className={container} ref={navbar}>
-      <nav>
+    <nav>
+      <div className={container} ref={navbar}>
+        <Link to='/'>
+          <StaticImage 
+            src='../../hao-chen-logo.png' 
+            alt='logo'
+            className={logo}
+            loading='lazy'
+          >
+          </StaticImage>
+        </Link>
         <ul className={nav}>
           <Link to="/" className={navText}>
             <li className={navItem}>
@@ -51,7 +62,7 @@ export default function Navbar({ onPaddingChange }) {
             </li>
           </Link>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
