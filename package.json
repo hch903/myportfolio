@@ -28,5 +28,8 @@
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.57.1",
     "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "gatsby-plugin-netlify": "^5.1.1"
   }
 }

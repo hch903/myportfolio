@@ -24,6 +24,7 @@ module.exports = {
       }
     },
     "gatsby-transformer-sharp",
-    "gatsby-plugin-mdx"
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-netlify"
   ]
 };
